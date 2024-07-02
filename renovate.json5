@@ -11,7 +11,7 @@
     "gomodTidy"
   ],
   "semanticCommits": "enabled",
-  "commitBodyTable": true,
+  "commitBodyTable": false,
   // Allow renovate to update the following types of dependencies in the Taskfile.yml:
   // - digests for env variables ending in _SHA
   // - versions for env variables ending in _VERSION
