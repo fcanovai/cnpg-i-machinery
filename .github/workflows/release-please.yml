@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   release-please:
     runs-on: ubuntu-latest
@@ -21,16 +25,9 @@ jobs:
       #   release-please from bumping the major version on breaking changes.
       - run: |
           npx release-please release-pr \
-            --token="${{ secrets.REPO_PAT }}" \
+            --release-type=go \
+            --token="${{ secrets.GITHUB_TOKEN }}" \
             --repo-url="${{ github.repository }}" \
             --release-as=0.1.0 \
             --bump-minor-pre-major=true \
-            --signoff "Francesco Canovai <francesco.canovai@enterprisedb.com>"
-
-      #- uses: googleapis/release-please-action@v4
-      #  id: release
-      #  with:
-      #    release-type: go
-      #    token: ${{ secrets.REPO_PAT }}
-      #    config-file: release-please-config.json
-      #    manifest-file: .release-please-manifest.json
+            --signoff "${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>"
