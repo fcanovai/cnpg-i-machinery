@@ -29,7 +29,6 @@ jobs:
             --token="${{ secrets.GITHUB_TOKEN }}" \
             --repo-url="${{ github.repository }}" \
             --bump-minor-pre-major=true \
-            --release-as=0.1.0 \
             --signoff "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>";
           npx release-please github-release \
             --token="${{ secrets.REPO_PAT }}" \
