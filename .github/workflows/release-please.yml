@@ -27,7 +27,7 @@ jobs:
       - run: |
           npx release-please release-pr \
             --release-type=go \
-            --token="${{ secrets.GITHUB_TOKEN }}" \
+            --token="${{ secrets.REPO_PAT }}" \
             --repo-url="${{ github.repository }}" \
             --bump-minor-pre-major=true \
-            --signoff "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
+            --signoff "Francesco Canovai <francesco.canovai@enterprisedb.com>"
