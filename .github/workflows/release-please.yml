@@ -29,6 +29,5 @@ jobs:
             --release-type=go \
             --token="${{ secrets.GITHUB_TOKEN }}" \
             --repo-url="${{ github.repository }}" \
-            --release-as=0.1.0 \
             --bump-minor-pre-major=true \
             --signoff "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
