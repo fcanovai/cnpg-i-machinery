@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/fcanovai/cnpg-i-machinery/compare/v0.2.0...v0.2.1) (2024-07-03)
+
+
+### Bug Fixes
+
+* test ([b8e1853](https://github.com/fcanovai/cnpg-i-machinery/commit/b8e1853c39ac3364f11f9c9780a6dd8e46bd7049))
+
 ## [0.2.0](https://github.com/fcanovai/cnpg-i-machinery/compare/v0.1.0...v0.2.0) (2024-07-03)
 
 
