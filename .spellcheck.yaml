@@ -10,6 +10,7 @@ matrix:
     lang: en
     d: en_US
   pipeline:
+  - pyspelling.filters.markdown:
   - pyspelling.filters.python:
   - pyspelling.filters.context:
       context_visible_first: true
