@@ -15,15 +15,16 @@ jobs:
         with:
           node-version: 20
       # TODO: remove release-as after first release. Used to set the first
-      #   release version, which would default to 1.0.0.
-      # TODO: remove bump-minor-pre-major to reach 1.0.0. Otherwise
-      #   major changes would be set as minor ones.
+      #   release version, which would default to 1.0.0. Set the version
+      #   manually also for 1.0.0.
+      # TODO: remove bump-minor-pre-major when in production. It prevents
+      #   release-please from bumping the major version on breaking changes.
       - run: |
           npx release-please release-pr \
             --token="${{ secrets.REPO_PAT }}" \
             --repo-url="${{ github.repository }}" \
+            --release-as=0.1.0 \
             --bump-minor-pre-major=true \
-            --release-as=0.4.0 \
             --signoff "Francesco Canovai <francesco.canovai@enterprisedb.com>"
 
       #- uses: googleapis/release-please-action@v4
