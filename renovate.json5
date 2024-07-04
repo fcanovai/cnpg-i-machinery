@@ -6,7 +6,8 @@
     ":semanticCommitType(chore)",
     ":labels(automated,no-issue)",
     "customManagers:githubActionsVersions",
-    ":automergeMinor"
+    ":automergeMinor",
+    ":automergeDigest"
   ],
   "postUpdateOptions": [
     "gomodTidy"
