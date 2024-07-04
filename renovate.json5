@@ -5,7 +5,8 @@
     ":gitSignOff",
     ":semanticCommitType(chore)",
     ":labels(automated,no-issue)",
-    "customManagers:githubActionsVersions"
+    "customManagers:githubActionsVersions",
+    ":automergeMinor"
   ],
   "postUpdateOptions": [
     "gomodTidy"
